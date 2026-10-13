@@ -1,0 +1,8 @@
+keystore/
+node_modules/
+dist/
+android/keystore.properties
+android/app/build/
+android/build/
+*.apk
+out/

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">HB GPS</string>
+    <string name="title_activity_main">HB GPS</string>
+    <string name="package_name">com.hectorbtech.hbgps</string>
+    <string name="custom_url_scheme">com.hectorbtech.hbgps</string>
+</resources>

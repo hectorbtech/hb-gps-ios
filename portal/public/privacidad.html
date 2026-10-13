@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad · HB GPS</title>
+<meta name="description" content="Política de privacidad de HB GPS: qué datos usa la app de rastreo, para qué y cómo pedir su eliminación.">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="/icon-192.png">
+<style>
+  :root { --bg:#f5f7f9; --card:#ffffff; --fg:#17212b; --muted:#5a6876; --line:#dde3e9; --accent:#0b6e5c; --accent-soft:#e3f2ee; color-scheme: light; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0e1419; --card:#151d24; --fg:#e6edf3; --muted:#9aa8b5; --line:#26323d; --accent:#3fc5a8; --accent-soft:#12302a; color-scheme: dark; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  header { background:var(--card); border-bottom:1px solid var(--line); }
+  .wrap { max-width:760px; margin:0 auto; padding:0 20px; }
+  header .wrap { display:flex; align-items:center; gap:12px; padding-block:16px; }
+  header img { width:36px; height:36px; border-radius:9px; }
+  header b { font-size:18px; letter-spacing:.2px; }
+  header a { margin-left:auto; color:var(--accent); text-decoration:none; font-weight:600; font-size:14px; }
+  main { padding-block:28px 48px; }
+  h1 { font-size:28px; line-height:1.2; margin:0 0 6px; text-wrap:balance; }
+  .meta { color:var(--muted); font-size:14px; margin:0 0 22px; }
+  h2 { font-size:19px; margin:30px 0 8px; padding-top:6px; text-wrap:balance; }
+  p, li { margin:0 0 10px; }
+  ul { padding-left:22px; margin:0 0 10px; }
+  li::marker { color:var(--accent); }
+  .note { background:var(--accent-soft); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin:18px 0; }
+  a { color:var(--accent); }
+  footer { color:var(--muted); font-size:13px; padding-block:22px 40px; border-top:1px solid var(--line); }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <img src="/icon-192.png" alt="" width="36" height="36">
+    <b>HB GPS</b>
+    <a href="/">Ir al portal</a>
+  </div>
+</header>
+<main class="wrap">
+  <h1>Política de privacidad de HB GPS</h1>
+  <p class="meta">Última actualización: 12 de octubre de 2026 · Responsable: Hector B Tech (HBT) · Contacto: <a href="mailto:support@hectorbtech.online">support@hectorbtech.online</a></p>
+
+  <p>HB GPS es una aplicación y un portal web de rastreo de vehículos y equipos. Esta política explica qué datos se usan, para qué, con quién se comparten y cómo puedes pedir que se corrijan o se eliminen. Aplica a la app <strong>HB GPS</strong> (Android, paquete <code>com.hectorbtech.hbgps</code>) y al portal <strong>hectorgps.com</strong>.</p>
+
+  <div class="note"><strong>En una frase:</strong> HB GPS muestra la ubicación de los equipos GPS de tu empresa. <strong>La app no usa ni guarda la ubicación de tu teléfono</strong>, no vendemos tus datos y no los usamos para publicidad.</div>
+
+  <h2>Qué datos usamos</h2>
+  <ul>
+    <li><strong>Cuenta:</strong> nombre, correo y rol de quien usa la app o el portal. Las cuentas las crea el administrador de la empresa. La contraseña se guarda cifrada, nunca en texto legible.</li>
+    <li><strong>Ubicación de los equipos rastreados:</strong> la que envían los dispositivos GPS instalados en los vehículos o equipos (posición, velocidad, rumbo, estado del motor, batería, voltaje y señal). No es la ubicación de tu teléfono.</li>
+    <li><strong>Identificador para notificaciones:</strong> un identificador de Firebase Cloud Messaging para enviarte al teléfono las alertas de tus equipos (por ejemplo, salida de una geovalla o exceso de velocidad).</li>
+    <li><strong>Registros de uso y seguridad:</strong> fecha y hora de los inicios de sesión y de las órdenes enviadas a los equipos (por ejemplo, apagar el motor), junto con el usuario que las hizo.</li>
+    <li><strong>Huella o rostro (opcional):</strong> si lo activas, la verificación la hace el sistema de tu teléfono. La app no recibe ni guarda tu huella ni tu rostro; solo guarda tus credenciales cifradas en el almacén seguro del teléfono.</li>
+  </ul>
+
+  <h2>Para qué los usamos</h2>
+  <p>Mostrar dónde están tus equipos, enviarte alertas, guardar el historial de recorridos, permitir órdenes a distancia autorizadas y mantener la seguridad del servicio.</p>
+
+  <h2>Con quién se comparten</h2>
+  <ul>
+    <li><strong>Tu empresa:</strong> los administradores y usuarios de tu empresa ven los equipos que les corresponden. Un cliente final solo ve sus propios equipos.</li>
+    <li><strong>Google (Firebase Cloud Messaging):</strong> para entregar las notificaciones a tu teléfono.</li>
+    <li><strong>OpenStreetMap / Nominatim:</strong> para convertir coordenadas en direcciones se envían únicamente las coordenadas del punto; no se envía tu nombre ni tu cuenta.</li>
+    <li><strong>Enlaces de seguimiento:</strong> si compartes un equipo con un enlace, quien lo reciba verá su ubicación hasta que el enlace venza o tú lo revoques.</li>
+  </ul>
+  <p>No vendemos tus datos ni los compartimos con terceros para publicidad.</p>
+
+  <h2>Cuánto tiempo se guardan</h2>
+  <p>El historial de posiciones se conserva 180 días y después se elimina automáticamente. Los datos de la cuenta se conservan mientras la cuenta esté activa. Los registros de seguridad se conservan el tiempo necesario para auditar el servicio.</p>
+
+  <h2>Seguridad</h2>
+  <p>Las sesiones usan tokens, las contraseñas se guardan cifradas, los accesos están separados por empresa y las órdenes críticas quedan registradas con el usuario que las hizo. El acceso al portal y a la API usa conexión cifrada (HTTPS).</p>
+
+  <h2>Tus derechos y cómo eliminar tus datos</h2>
+  <p>Puedes pedir acceso, corrección o eliminación de tus datos escribiendo a <a href="mailto:support@hectorbtech.online">support@hectorbtech.online</a>. Para eliminar tu cuenta, pídelo al administrador de tu empresa o a ese correo; lo atenderemos en un plazo máximo de 30 días. Al eliminar la cuenta se borran tus datos personales (nombre, correo, identificadores de notificación); los equipos y el historial pertenecen a la empresa propietaria y se rigen por su contrato.</p>
+
+  <h2>Menores de edad</h2>
+  <p>HB GPS es una herramienta para empresas y no está dirigida a menores de 18 años.</p>
+
+  <h2>Cambios en esta política</h2>
+  <p>Si cambiamos esta política, publicaremos la nueva versión en esta misma página con su fecha y, cuando el cambio sea importante, lo avisaremos en la app o por correo.</p>
+</main>
+<footer class="wrap">© 2026 Hector B Tech (HBT) · HB GPS · <a href="/">hectorgps.com</a></footer>
+</body>
+</html>

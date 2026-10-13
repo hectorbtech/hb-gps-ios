@@ -1,0 +1,10 @@
+{
+  "appId": "com.hectorbtech.hbgps",
+  "appName": "HB GPS",
+  "webDir": "dist",
+  "server": { "androidScheme": "http", "cleartext": true },
+  "android": { "allowMixedContent": true },
+  "ios": { "contentInset": "never", "backgroundColor": "#0B1F3A" },
+  "experimental": { "ios": { "spm": { "packageOptions": { "@capacitor-firebase/messaging": { "symlink": true } } } } },
+  "plugins": { "SplashScreen": { "launchShowDuration": 600, "backgroundColor": "#0B1F3A", "showSpinner": false } }
+}

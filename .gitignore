@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+out/
+.env
+.env.*
+*.jks
+*.keystore
+*.p8
+keystore/
+GoogleService-Info.plist
+.DS_Store

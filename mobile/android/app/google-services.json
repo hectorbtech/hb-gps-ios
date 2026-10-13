@@ -1,0 +1,124 @@
+{
+  "project_info": {
+    "project_number": "563652789428",
+    "project_id": "hector--b-systems",
+    "storage_bucket": "hector--b-systems.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563652789428:android:a80d1d180f06fe5b2643e1",
+        "android_client_info": {
+          "package_name": "com.hectorbsystems.turnosdisplay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuQBXAqyN93mvb_AdCDINiPGZ75FHLvmg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563652789428:android:df9b9963e5857c622643e1",
+        "android_client_info": {
+          "package_name": "com.hectorbtech.delivery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuQBXAqyN93mvb_AdCDINiPGZ75FHLvmg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563652789428:android:91c9bc01ccf1e69a2643e1",
+        "android_client_info": {
+          "package_name": "com.hectorbtech.hbgps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuQBXAqyN93mvb_AdCDINiPGZ75FHLvmg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563652789428:android:75dbac8767d49e6f2643e1",
+        "android_client_info": {
+          "package_name": "com.hectorbtech.prestamitas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuQBXAqyN93mvb_AdCDINiPGZ75FHLvmg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563652789428:android:d456af005043cea42643e1",
+        "android_client_info": {
+          "package_name": "com.hectorbtech.restaurantpos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuQBXAqyN93mvb_AdCDINiPGZ75FHLvmg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563652789428:android:6668f82ec35844182643e1",
+        "android_client_info": {
+          "package_name": "com.puntoycoma.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuQBXAqyN93mvb_AdCDINiPGZ75FHLvmg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

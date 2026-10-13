@@ -1,0 +1,59 @@
+# HB GPS · compilación de la app de iPhone en la nube (Codemagic) y envío a TestFlight.
+# Este archivo va en la RAÍZ del repositorio que conectes a Codemagic (el repositorio debe contener las carpetas `mobile` y `portal`).
+# Pasos previos (una sola vez, ver mobile/store/guia-app-store.md):
+#   1) Cuenta de Apple Developer + app «HB GPS» creada en App Store Connect (identificador com.hectorbtech.hbgps).
+#   2) En Codemagic → Teams → Integrations → App Store Connect: agrega tu llave de API de Apple con el nombre «HBT App Store Connect».
+#   3) En Codemagic → la app → Environment variables → grupo «hbgps_ios» con dos variables:
+#        · APP_STORE_APPLE_ID: el «Apple ID» numérico de la app (App Store Connect → Información de la app → General).
+#        · GOOGLE_SERVICE_INFO_PLIST_B64: el archivo GoogleService-Info.plist de Firebase convertido a base64 (marcar como segura).
+#   4) La llave APNs (.p8) se sube a Firebase (Configuración del proyecto → Cloud Messaging → Apple), no a Codemagic.
+workflows:
+  hbgps-ios:
+    name: HB GPS · iPhone (TestFlight)
+    instance_type: mac_mini_m2
+    max_build_duration: 45
+    integrations:
+      app_store_connect: HBT App Store Connect
+    environment:
+      node: 22
+      xcode: latest
+      groups:
+        - hbgps_ios
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.hectorbtech.hbgps
+      vars:
+        XCODE_PROJECT: mobile/ios/App/App.xcodeproj
+        XCODE_SCHEME: App
+    scripts:
+      - name: Instalar dependencias de la app
+        script: |
+          cd mobile
+          npm ci
+      - name: Firebase (avisos push)
+        script: |
+          if [ -n "$GOOGLE_SERVICE_INFO_PLIST_B64" ]; then
+            echo "$GOOGLE_SERVICE_INFO_PLIST_B64" | base64 --decode > mobile/ios/App/App/GoogleService-Info.plist
+            echo "GoogleService-Info.plist instalado"
+          else
+            echo "AVISO: falta GOOGLE_SERVICE_INFO_PLIST_B64; la app se compila pero sin avisos push"
+          fi
+      - name: Preparar el proyecto iOS (web, sincronizar, versión y compilación)
+        script: |
+          cd mobile
+          IOS_BUILD_NUMBER=$(($(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" 2>/dev/null || echo 0) + 1)) \
+            node scripts/ios-prepare.mjs
+      - name: Firma automática
+        script: xcode-project use-profiles
+      - name: Compilar el IPA
+        script: |
+          xcode-project build-ipa \
+            --project "$CM_BUILD_DIR/$XCODE_PROJECT" \
+            --scheme "$XCODE_SCHEME"
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
