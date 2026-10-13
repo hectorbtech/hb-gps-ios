@@ -63,4 +63,6 @@ workflows:
     publishing:
       app_store_connect:
         auth: integration
-        submit_to_testflight: true
+        # Solo sube la compilacion: queda disponible para los testers INTERNOS de TestFlight. El envio a la revision de Apple para testers
+        # EXTERNOS (true) exige completar antes la informacion de prueba en App Store Connect.
+        submit_to_testflight: false
